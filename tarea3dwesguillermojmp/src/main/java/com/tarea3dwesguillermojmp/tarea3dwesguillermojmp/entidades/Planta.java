@@ -45,7 +45,37 @@ public class Planta implements Serializable {
 		return "Planta [id=" + id + ", codigo=" + codigo + ", nombreComun=" + nombreComun + ", nombreCientifico="
 				+ nombreCientifico + "]";
 	}
-	
-	
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getNombreComun() {
+		return nombreComun;
+	}
+
+	public void setNombreComun(String nombreComun) {
+		this.nombreComun = nombreComun;
+	}
+
+	public String getNombreCientifico() {
+		return nombreCientifico;
+	}
+
+	public void setNombreCientifico(String nombreCientifico) {
+		this.nombreCientifico = nombreCientifico;
+	}
 
 }
