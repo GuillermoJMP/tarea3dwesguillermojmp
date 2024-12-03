@@ -17,7 +17,7 @@ public class Ejemplar implements Serializable {
 
 	@Column
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	long id;
+	public Long id;
 
 	@Column
 	private String nombre;
