@@ -1,3 +1,5 @@
+package com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.entidades;
+
 import java.io.Serializable;
 import java.time.LocalDateTime;
 

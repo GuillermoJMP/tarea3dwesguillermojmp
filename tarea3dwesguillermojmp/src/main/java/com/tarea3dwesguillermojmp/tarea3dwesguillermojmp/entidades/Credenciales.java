@@ -1,3 +1,5 @@
+package com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.entidades;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
