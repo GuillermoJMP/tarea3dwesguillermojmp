@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.principal.Principal;
+import com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.main.Principal;
 
 @SpringBootApplication
 public class Tarea3dwesguillermojmpApplication {

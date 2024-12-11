@@ -1,4 +1,4 @@
-package com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.principal;
+package com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.main;
 
 import java.util.Scanner;
 

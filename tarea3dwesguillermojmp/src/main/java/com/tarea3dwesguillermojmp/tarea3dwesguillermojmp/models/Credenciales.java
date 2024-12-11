@@ -1,4 +1,4 @@
-package com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.entidades;
+package com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
