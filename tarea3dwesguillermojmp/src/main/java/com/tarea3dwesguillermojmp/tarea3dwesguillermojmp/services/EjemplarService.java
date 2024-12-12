@@ -8,25 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class EjemplarService {
+public interface EjemplarService {
 
-    @Autowired
-    private EjemplarRepository ejemplarRepository;
-
-    public List<Ejemplar> listarEjemplares() {
-        return ejemplarRepository.findAll();
-    }
-
-    public Optional<Ejemplar> buscarPorId(Long id) {
-        return ejemplarRepository.findById(id);
-    }
-
-    public Ejemplar guardarEjemplar(Ejemplar ejemplar) {
-        return ejemplarRepository.save(ejemplar);
-    }
-
-    public void eliminarEjemplar(Long id) {
-        ejemplarRepository.deleteById(id);
-    }
+    List<Ejemplar> listarEjemplares();
+    Optional<Ejemplar> buscarPorId(Long id);
+    Ejemplar guardarEjemplar(Ejemplar ejemplar);
+    void eliminarEjemplar(Long id);
 }

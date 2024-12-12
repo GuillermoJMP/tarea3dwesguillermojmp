@@ -2,18 +2,17 @@ package com.tarea3dwesguillermojmp.tarea3dwesguillermojmp;
 
 
 
+import com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.main.Principal;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-
-import com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.main.*;
 
 @SpringBootApplication
 public class Tarea3dwesguillermojmpApplication {
 	
 	@Bean
-	public Tarea3dwesguillermojmpApplication  applicationStartupRunner() {
-		return new Tarea3dwesguillermojmpApplication();
+	public Principal applicationStartupRunner() {
+		return new Principal();
 	}
 
 	public static void main(String[] args) {

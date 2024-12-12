@@ -7,19 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Service
-public class CredencialesService {
 
-    @Autowired
-    private CredencialesRepository credencialesRepository;
+public interface CredencialesService {
 
-    public Optional<Credenciales> buscarPorUsuario(String usuario) {
-        return credencialesRepository.findAll().stream()
-                .filter(c -> c.getUsuario().equals(usuario))
-                .findFirst();
-    }
-
-    public Credenciales guardarCredenciales(Credenciales credenciales) {
-        return credencialesRepository.save(credenciales);
-    }
+    Optional<Credenciales> buscarPorUsuario(String usuario);
+    Credenciales guardarCredenciales(Credenciales credenciales);
 }

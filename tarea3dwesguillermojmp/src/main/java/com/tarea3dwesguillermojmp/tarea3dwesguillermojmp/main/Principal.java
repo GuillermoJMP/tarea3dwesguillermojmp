@@ -4,36 +4,32 @@ import com.tarea3dwesguillermojmp.tarea3dwesguillermojmp.views.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
-@SpringBootApplication
-@ComponentScan("com.tarea3dwesguillermojmp.tarea3dwesguillermojmp")
-public class Tarea3Application implements CommandLineRunner {
+@Component
+public class Principal implements CommandLineRunner {
 
     @Autowired
-    private PlantaView plantaView;
+    PlantaView plantaView;
 
     @Autowired
-    private PersonaView personaView;
+    PersonaView personaView;
 
     @Autowired
-    private CredencialesView credencialesView;
+    CredencialesView credencialesView;
 
     @Autowired
-    private EjemplarView ejemplarView;
+    EjemplarView ejemplarView;
 
     @Autowired
-    private MensajeView mensajeView;
-
-    public static void main(String[] args) {
-        SpringApplication.run(Tarea3Application.class, args);
-    }
+    MensajeView mensajeView;
 
     @Override
     public void run(String... args) throws Exception {
+
         Scanner scanner = new Scanner(System.in);
         int opcion;
 

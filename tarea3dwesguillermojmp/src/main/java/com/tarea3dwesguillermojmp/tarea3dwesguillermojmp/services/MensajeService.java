@@ -8,25 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class MensajeService {
+public interface MensajeService {
 
-    @Autowired
-    private MensajeRepository mensajeRepository;
-
-    public List<Mensaje> listarMensajes() {
-        return mensajeRepository.findAll();
-    }
-
-    public Optional<Mensaje> buscarPorId(Long id) {
-        return mensajeRepository.findById(id);
-    }
-
-    public Mensaje guardarMensaje(Mensaje mensaje) {
-        return mensajeRepository.save(mensaje);
-    }
-
-    public void eliminarMensaje(Long id) {
-        mensajeRepository.deleteById(id);
-    }
+    List<Mensaje> listarMensajes();
+    Optional<Mensaje> buscarPorId(Long id);
+    Mensaje guardarMensaje(Mensaje mensaje);
+    void eliminarMensaje(Long id);
 }

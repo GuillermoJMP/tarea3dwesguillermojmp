@@ -8,25 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class PlantaService {
+public interface PlantaService {
 
-    @Autowired
-    private PlantaRepository plantaRepository;
-
-    public List<Planta> listarPlantas() {
-        return plantaRepository.findAll();
-    }
-
-    public Optional<Planta> buscarPorId(Long id) {
-        return plantaRepository.findById(id);
-    }
-
-    public Planta guardarPlanta(Planta planta) {
-        return plantaRepository.save(planta);
-    }
-
-    public void eliminarPlanta(Long id) {
-        plantaRepository.deleteById(id);
-    }
+    List<Planta> listarPlantas();
+    Optional<Planta> buscarPorId(Long id);
+    Planta guardarPlanta(Planta planta);
+    void eliminarPlanta(Long id);
 }

@@ -8,25 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
-public class PersonaService {
+public interface PersonaService {
 
-	@Autowired
-	private PersonaRepository personaRepository;
-
-	public List<Persona> listarPersonas() {
-		return personaRepository.findAll();
-	}
-
-	public Optional<Persona> buscarPorId(Long id) {
-		return personaRepository.findById(id);
-	}
-
-	public Persona guardarPersona(Persona persona) {
-		return personaRepository.save(persona);
-	}
-
-	public void eliminarPersona(Long id) {
-		personaRepository.deleteById(id);
-	}
+	List<Persona> listarPersonas();
+	Optional<Persona> buscarPorId(Long id);
+	Persona guardarPersona(Persona persona);
+	void eliminarPersona(Long id);
 }
